@@ -12,7 +12,7 @@ class CategoriesSelectScreen extends StatelessWidget {
     final routeArgs =
         ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryId = routeArgs["id"];
-    final categoryTitle = routeArgs["title"];
+    final categoryTitle = routeArgs["title"]; 
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -21,7 +21,7 @@ class CategoriesSelectScreen extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          "Select Data",
+          categoryId,
         ),
       ),
     );
