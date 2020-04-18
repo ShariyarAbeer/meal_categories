@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './categories_select_screen.dart';
 import './categories_screen.dart';
 
 void main() => runApp(MyApp());
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
             ),
       ),
       home: CategoriesScreen(),
+      routes: {
+        CategoriesSelectScreen.routeName: (cxt) => CategoriesSelectScreen(),
+      },
     );
   }
 }
