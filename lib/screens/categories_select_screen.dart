@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import '../widgets/meal_item.dart';
 import '../dummy_data/dummy_data.dart';
+import '../models/meal.dart';
 
 class CategoriesSelectScreen extends StatelessWidget {
   static const routeName = "/category-select-screen";
+
+  final List<Meal> availableMeals;
+
+  CategoriesSelectScreen(this.availableMeals);
+
   // final String id;
   // final String titel;
 
