@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './error_page.dart';
+import './screens/meal_detail_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/categories_select_screen.dart';
 
@@ -32,7 +34,22 @@ class MyApp extends StatelessWidget {
       home: CategoriesScreen(),
       routes: {
         CategoriesSelectScreen.routeName: (cxt) => CategoriesSelectScreen(),
+        MealDetailScreen.routeName: (cxt) => MealDetailScreen(),
+        ErrorPage.routeName: (cxt) => ErrorPage(),
       },
+
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (ctx) => ErrorPage(),
+        );
+      },
+
+      // onGenerateRoute: (settings) {
+      //   print(settings.arguments);
+      //   return MaterialPageRoute(
+      //     builder: (cxt) => CategoriesScreen(),
+      //   );
+      // },
     );
   }
 }
