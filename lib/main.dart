@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/filters_screen.dart';
 import './error_page.dart';
 import './screens/meal_detail_screen.dart';
 //import './screens/categories_screen.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         CategoriesSelectScreen.routeName: (cxt) => CategoriesSelectScreen(),
         MealDetailScreen.routeName: (cxt) => MealDetailScreen(),
         ErrorPage.routeName: (cxt) => ErrorPage(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
 
       onUnknownRoute: (settings) {
